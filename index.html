@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Julia Set</title>
+        <script type="text/javascript" src="drawJuliaSet.js"></script>
+    </head>
+    <body>
+        <h1>Julia Set Viewer</h1>
+        <canvas id="canvas" width="640" height="480">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <p>Real Value: <input type="text" name="real" id="realVal"><br>
+        <p>Imaginary Value: <input type="text" name="imaginary" id="imaginaryVal"><br>
+        <p>Function: <br>
+        <input type="radio" name="quadratic" id="quadeq"> f(z)=z^2-c <br><br>
+        <input type="submit" value="Draw">
+
+        <script type="text/javascript">
+            drawGraph();
+        </script>
+    </body>
+</html>
