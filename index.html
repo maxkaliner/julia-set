@@ -3,6 +3,9 @@
     <head>
         <title>Julia Set</title>
         <script type="text/javascript" src="drawJuliaSet.js"></script>
+        <script type="text/javascript" src="HSVToRGB.js"></script>
+        <script type="text/javascript" src="ComplexNumbers.js"></script>
+
     </head>
     <body>
         <h1>Julia Set Viewer</h1>
@@ -12,6 +15,10 @@
         <form onSubmit="JavaScript:return drawGraph()">
             <p>Real Value: <input type="text" name="real" id="realVal"><br>
             <p>Imaginary Value: <input type="text" name="imaginary" id="imaginaryVal"><br>
+            <p>Zoom Factor: <input type="text" name="zoom" id="zoom"><br>
+            <p>Maximum Iterations: <input type="text" name="maxiterations" id="maxiterations"><br>
+            <p>X-Position of Origin <input type="text" name="xpos" id="xpos"><br>
+            <p>Y-Position of Origin <input type="text" name="ypos" id="ypos"><br>
             <p>Function: <br>
             <input type="radio" name="quadratic" id="quadeq"> f(z)=z^2-c <br><br>
             <script>
