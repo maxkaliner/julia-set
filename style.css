@@ -1,0 +1,21 @@
+#buttons {
+    
+}
+
+#canvas {
+    float: left;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#title {
+    margin-left:70px;
+}
+
+p {
+    font-size: 25px;
+}
+
+input {
+    font-size: 25px;
+}

@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Julia Set</title>
+        <title>Julia Set Generator</title>
         <script type="text/javascript" src="drawJuliaSet.js"></script>
         <script type="text/javascript" src="HSVToRGB.js"></script>
         <script type="text/javascript" src="ComplexNumbers.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
 
     </head>
     <body>
-        <h1>Julia Set Viewer</h1>
+        <h1 id="title">Julia Set Generator</h1>
         <canvas id="canvas" width="640" height="640">
             Your browser does not support the HTML5 canvas tag.
         </canvas>
-        <form onSubmit="JavaScript:return drawGraph()">
-            <p>Real Value: <input type="text" name="real" id="realVal"><br>
-            <p>Imaginary Value: <input type="text" name="imaginary" id="imaginaryVal"><br>
-            <p>Zoom Factor: <input type="text" name="zoom" id="zoom"><br>
-            <p>Maximum Iterations: <input type="text" name="maxiterations" id="maxiterations"><br>
-            <p>X-Position of Origin <input type="text" name="xpos" id="xpos"><br>
-            <p>Y-Position of Origin <input type="text" name="ypos" id="ypos"><br>
-            <p>Function: <br>
-            <input type="radio" name="quadratic" id="quadeq"> f(z)=z^2-c <br><br>
-            <script>
-                drawGraph();
-            </script>
-            <input type="submit" value="Draw">
-        </form>
+        <div id="buttons">
+            <form onSubmit="JavaScript:return drawGraph()">
 
+                <p>Real Value: <input type="text" name="real" id="realVal"size="10"><br>
+                <p>Imaginary Value: <input type="text" name="imaginary" id="imaginaryVal" size="10"><br>
+                <p>Zoom Factor: <input type="text" name="zoom" id="zoom" size="10"><br>
+                <p>Maximum Iterations: <input type="text" name="maxiterations" id="maxiterations" size="10"><br>
+                <p>X-Position of Origin <input type="text" name="xpos" id="xpos" size="10"><br>
+                <p>Y-Position of Origin <input type="text" name="ypos" id="ypos" size="10"><br>
+                <p>Function: <br>
+                <input type="radio" name="quadratic" id="quadeq"> f(z)=z^2-c <br><br>
+                <script>
+                    drawGraph();
+                </script>
+                <input type="submit" value="Draw">
+            </form>
+        </div>
     </body>
 </html>

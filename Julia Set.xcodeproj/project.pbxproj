@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		0F46172A1E51702E0051BAFB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0F55D77D1E569D610003D9CE /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		0F72DBE41E3FE4D8007D3FF2 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0F72DBE51E3FE570007D3FF2 /* drawJuliaSet.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = drawJuliaSet.js; sourceTree = "<group>"; };
 		0F8622AB1E566E8A000FC6BA /* HSVToRGB.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = HSVToRGB.js; sourceTree = "<group>"; };
@@ -18,6 +19,7 @@
 		0F72DBDD1E3FE4BD007D3FF2 = {
 			isa = PBXGroup;
 			children = (
+				0F55D77D1E569D610003D9CE /* style.css */,
 				0F8622AC1E566EDA000FC6BA /* ComplexNumbers.js */,
 				0F8622AB1E566E8A000FC6BA /* HSVToRGB.js */,
 				0F46172A1E51702E0051BAFB /* LICENSE */,
