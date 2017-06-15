@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Julia Set Generator</title>
-        <script type="text/javascript" src="drawJuliaSet.js"></script>
-        <script type="text/javascript" src="HSVToRGB.js"></script>
-        <script type="text/javascript" src="ComplexNumbers.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+<title>Julia Set Generator</title>
+<script type="text/javascript" src="drawJuliaSet.js"></script>
+<script type="text/javascript" src="HSVToRGB.js"></script>
+<script type="text/javascript" src="ComplexNumbers.js"></script>
+<script type="text/javascript" src="gpu.js"></script>
+<script type="text/javascript" src="turbo.js"></script>
 
-    </head>
-    <body>
-        <h1 id="title">Julia Set Generator</h1>
-        <canvas id="canvas" width="640" height="640">
-            Your browser does not support the HTML5 canvas tag.
-        </canvas>
-        <div id="buttons">
-            <form onSubmit="JavaScript:return drawGraph()">
 
-                <p>Real Value: <input type="text" name="real" id="realVal"size="10"><br>
-                <p>Imaginary Value: <input type="text" name="imaginary" id="imaginaryVal" size="10"><br>
-                <p>Zoom Factor: <input type="text" name="zoom" id="zoom" size="10"><br>
-                <p>Maximum Iterations: <input type="text" name="maxiterations" id="maxiterations" size="10"><br>
-                <p>X-Position of Origin <input type="text" name="xpos" id="xpos" size="10"><br>
-                <p>Y-Position of Origin <input type="text" name="ypos" id="ypos" size="10"><br>
-                <p>Function: <br>
-                <input type="radio" name="quadratic" id="quadeq"> f(z)=z^2-c <br><br>
-                <script>
-                    drawGraph();
-                </script>
-                <input type="submit" value="Draw">
-            </form>
-        </div>
-    </body>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<h1 id="title">Julia Set Generator</h1>
+<img hidden id="loading" src="Loading_icon.gif">
+<canvas id="canvas" width="4000" height="4000" tabindex="0">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<div id="buttons">
+<a id="downloadLnk" download="YourFileName.jpg">Download as image</a><br>
+<form onSubmit="JavaScript:return drawGraph()">
+<p>Real Value: <input type="text" name="real"
+id="realVal"size="10"><br>
+<p>Imaginary Value: <input type="text"
+name="imaginary" id="imaginaryVal" size="10"><br>
+<p>Zoom Factor: <input type="text" name="zoom"
+id="zoom" size="10"><input style="width:200px" type="range" name="zoom" id="zoomslider" oninput="zoomsliderfunc()" max="18500">
+<br>
+<p>Maximum Iterations: <input type="text"
+name="maxiterations" id="maxiterations" size="10"><br>
+<p>X-Position of Origin <input type="text" name="xpos"
+id="xpos" size="10"><br>
+<p>Y-Position of Origin <input type="text" name="ypos"
+id="ypos" size="10"><br>
+<p>Function: <br>
+<input type="radio" name="quadratic" id="quadeq"
+checked> f(z)=z^2-c<br>
+<input type="radio" name="quadratic" id="cubiceq">
+f(z)=z^3-c <br>
+<input type="radio" name="quadratic" id="quarticeq">
+f(z)=z^4-c <br>
+<input type="radio" name="quadratic" id="mandelbrot">
+Mandelbrot Set <br><br>
+<script>
+drawGraph();
+</script>
+<input type="submit" value="Draw">
+</form>
+</div>
+</body>
 </html>
